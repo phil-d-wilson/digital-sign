@@ -1,0 +1,32 @@
+version: "2"
+slug: "digital-sign"
+name: "Digital Sign"
+type: "sw.application"
+assets:
+  - url: "https://github.com/phil-d-wilson/digital-sign"
+    name: "repository"
+  - url: "https://raw.githubusercontent.com/phil-d-wilson/digital-sign/master/logo.png"
+    name: "logo"
+data:
+  description: "Display any URL on a device connected to a HDMI display"
+  applicationConfigVariables:
+    - BALENA_HOST_CONFIG_gpu_mem: 64
+  applicationEnvironmentVariables:
+    - SHOW_CURSOR: 0
+    - ENABLE_GPU: 0   
+    - KIOSK: 1
+    - PERSISTENT: 1
+    - PORTAL_SSID: balenaDash
+    - PORTAL_PASSPHRASE: balenaDash
+    - ACTIVITY_TIMEOUT: 600
+    - LAUNCH_URL: "https://balena.io/"
+    - WINDOW_POSITION: 0,0
+  defaultDeviceType: "raspberrypi4-64"
+  supportedDeviceTypes:
+    - "raspberrypi4-64"
+    - "fincm3"
+    - "raspberrypi3"
+    - "raspberrypi3-64"
+    - "intel-nuc"
+    - "genericx86-64-ext"
+    - "raspberrypi400-64"
