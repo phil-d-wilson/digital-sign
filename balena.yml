@@ -1,14 +1,16 @@
-version: "2"
-slug: "digital-sign"
 name: "Digital Sign"
+description: "Display any URL on a device connected to a HDMI display"
 type: "sw.application"
 assets:
-  - url: "https://github.com/phil-d-wilson/digital-sign"
-    name: "repository"
-  - url: "https://raw.githubusercontent.com/phil-d-wilson/digital-sign/master/logo.png"
-    name: "logo"
+  repository:
+    type: "blob.asset"
+    data:
+      url: "https://github.com/phil-d-wilson/digital-sign"
+  logo:
+    type: "blob.asset"
+    data:
+      url: "https://raw.githubusercontent.com/phil-d-wilson/digital-sign/master/logo.png"
 data:
-  description: "Display any URL on a device connected to a HDMI display"
   applicationConfigVariables:
     - BALENA_HOST_CONFIG_gpu_mem: 64
   applicationEnvironmentVariables:
